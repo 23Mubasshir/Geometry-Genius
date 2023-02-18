@@ -182,7 +182,28 @@ document.getElementById('btn-ellipse').addEventListener('click', function(){
 
 })
 
+// function -1 to validate input (used 5 times).
+function giveData(B,H ){
+    if( isNaN(B) || isNaN(H) || B < 0  || H <0){
+        alert('please provide a positive number in both input field.')
+        depositFieldTriangleB.value = '';
+        depositFieldTriangleH.value = '';
+        return;
+    }
+}
 
-
-
+//  function -2 to display data (used 5 times).
+function displayData(nameOfA, areaOfA) {
+    const container = document.getElementById("table-container");
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${serial}</td>
+      <td>${nameOfA}</td>
+      <td>${areaOfA} cm<sup>2</sup> </td> 
+      <td>
+          <button class="btn btn-primary fw-semibold">Covert to m<sup>2</sup></button>
+      </td>
+    `;
+    container.appendChild(tr);
+}
 
