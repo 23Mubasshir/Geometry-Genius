@@ -153,6 +153,34 @@ document.getElementById('btn-pentagon').addEventListener('click', function(){
 
 })
 
+// ------ Ellipse ----- 
+
+document.getElementById('btn-ellipse').addEventListener('click', function(){
+
+    
+    const nameEllipse =document.getElementById("name-ellipse").innerText;
+
+    const depositFieldEllipseA = document.getElementById('ellipse-a');
+    const ellipseAString = depositFieldEllipseA.value;
+    const ellipseA = parseFloat(ellipseAString);
+
+    const depositFieldEllipseB = document.getElementById('ellipse-b');
+    const ellipseBString = depositFieldEllipseB.value;
+    const ellipseB = parseFloat(ellipseBString);
+
+    depositFieldEllipseA.value = '';
+    depositFieldEllipseB.value = '';
+    //----- function-1-----
+    giveData(ellipseA, ellipseB);
+    serial +=1;
+    
+    const ellipseArea = 3.1416 * ellipseA * ellipseB ;
+    const ellipseAreaFixed = ellipseArea.toFixed(2);
+    //----- function-2-----
+    displayData(nameEllipse, ellipseAreaFixed);
+    
+
+})
 
 
 
