@@ -95,9 +95,63 @@ document.getElementById('btn-parallelogram').addEventListener('click', function(
 })
 
 
+// ------ Rhombus ----- 
 
+document.getElementById('btn-rhombus').addEventListener('click', function(){
 
+    
+    const nameRhombus =document.getElementById("name-rhombus").innerText;
 
+    const depositFieldRhombusD1 = document.getElementById('rhombus-d1');
+    const rhombusD1String = depositFieldRhombusD1.value;
+    const rhombusD1 = parseFloat(rhombusD1String);
+
+    const depositFieldRhombusD2 = document.getElementById('rhombus-d2');
+    const rhombusD2String = depositFieldRhombusD2.value;
+    const rhombusD2 = parseFloat(rhombusD2String);
+
+    depositFieldRhombusD1.value = '';
+    depositFieldRhombusD2.value = '';
+    //----- function-1-----
+    giveData(rhombusD1,rhombusD2);
+    serial +=1;
+   
+    const rhombusArea = 0.5 * rhombusD1 * rhombusD2 ;
+    const rhombusAreaFixed = rhombusArea.toFixed(2);
+    //----- function-2-----
+    displayData(nameRhombus, rhombusAreaFixed);
+    
+
+})
+
+// ------ pentagon ----- 
+
+document.getElementById('btn-pentagon').addEventListener('click', function(){
+    
+    
+    const namePentagon =document.getElementById("name-pentagon").innerText;
+
+    const depositFieldPentagonP = document.getElementById('pentagon-p');
+    const pentagonPString = depositFieldPentagonP.value;
+    const pentagonP = parseFloat(pentagonPString);
+
+    const depositFieldPentagonB = document.getElementById('pentagon-b');
+    const pentagonBString = depositFieldPentagonB.value;
+    const pentagonB = parseFloat(pentagonBString);
+
+    depositFieldPentagonP.value = '';
+    depositFieldPentagonB.value = '';
+    //----- function-1-----
+    giveData(pentagonP, pentagonB);
+    serial +=1;
+
+    const pentagonArea = 0.5 * pentagonP * pentagonB ;
+    const pentagonAreaFixed = pentagonArea.toFixed(2);
+    //----- function-2-----
+    displayData(namePentagon, pentagonAreaFixed);
+    
+
+})
 
 
 
