@@ -1,3 +1,5 @@
+
+//-----Random Color function-----
 function randomColor() {
     let color = [];
     for (let i = 0; i < 3; i++) {
@@ -6,8 +8,6 @@ function randomColor() {
     return 'rgb(' + color.join(', ') + ')';
   } 
   
-
-
   document.getElementById('card-body-color').addEventListener("mouseover", function(){
     document.getElementById('card-body-color').style.backgroundColor = randomColor();
   });

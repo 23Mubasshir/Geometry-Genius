@@ -1,3 +1,5 @@
-document.getElementById('blog-button').addEventListener('click', function(){
+//-----linking to another page 
+
+ocument.getElementById('blog-button').addEventListener('click', function(){
     window.location.href = "qa.html";
 })
